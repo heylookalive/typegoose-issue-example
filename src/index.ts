@@ -4,8 +4,8 @@ import ExpressPlaygroundMiddleware from "graphql-playground-middleware-express";
 import { buildSchema } from "type-graphql";
 import { createGraphqlMiddleware } from "express-gql";
 import express from "express";
-import { OrganisationResolver } from "./entities/Org";
-import { UserResolver } from "./entities/User";
+import { OrganisationResolver } from "./entities/OrgResolver";
+import { UserResolver } from "./entities/UserResolver";
 
 (async function main() {
 	const app = express();

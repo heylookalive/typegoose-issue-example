@@ -14,16 +14,3 @@ export class Org {
 }
 
 export const OrgModel = getModelForClass(Org);
-
-@Resolver()
-export class OrganisationResolver {
-	@Query((returns) => Org, { nullable: true })
-	async organisation(): Promise<Org> {
-		return {
-			name: "org",
-			meta: {
-				createdAt: new Date(),
-			},
-		};
-	}
-}

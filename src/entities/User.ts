@@ -14,16 +14,3 @@ export class User {
 }
 
 export const UserModel = getModelForClass(User);
-
-@Resolver()
-export class UserResolver {
-	@Query((returns) => User, { nullable: true })
-	async organisation(): Promise<User> {
-		return {
-			name: "username",
-			meta: {
-				createdAt: new Date(),
-			},
-		};
-	}
-}
